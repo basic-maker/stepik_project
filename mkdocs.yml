@@ -1,3 +1,7 @@
-﻿site_name: Stepik Project Docs
+﻿site_name: Project Documentation
 nav:
   - Home: index.md
+  - Module 1: module1.md
+  - Module 2: module2.md
+  - Module 3: module3.md
+docs_dir: docs
