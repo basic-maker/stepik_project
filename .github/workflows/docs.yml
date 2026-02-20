@@ -21,9 +21,13 @@ jobs:
           pip install codespell
           codespell docs/ README.md CONTRIBUTING.md
       - name: Lint Markdown files
-        uses: actionshub/markdownlint@v3
+        uses: DavidAnson/markdownlint-cli2-action@v22
         with:
           config: .markdownlint.json
+          globs: |
+            README.md
+            CONTRIBUTING.md
+            docs/**/*.md
       - name: Build Docs
         run:  mkdocs build
       - name: Deploy to GitHub Pages
